@@ -32,7 +32,7 @@ app.get('/api/timestamp', (req, res) => {
     unix: unixTime,
     utc: utcTime
   })
-})
+});
 
 app.get("/api/timestamp/:date_string", (req, res) => {
   if (/\d{5,}/.test(req.params.date_string)) {
@@ -50,7 +50,7 @@ app.get("/api/timestamp/:date_string", (req, res) => {
     unix: currentDate.valueOf(),
     utc: currentDate.toUTCString()
   });
-})
+});
 
 
 // listen for requests :)
